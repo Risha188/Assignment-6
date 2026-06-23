@@ -1,0 +1,15 @@
+{
+  "name": "assignment-6",
+  "version": "1.0.0",
+  "description": "Tutedude Node.js Project",
+  "license": "ISC",
+  "author": "Parna Das",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "dev" : "nodemon server.js"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
