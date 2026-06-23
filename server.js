@@ -5,7 +5,7 @@ const app = http.createServer((req,res)=>{
     const {url} = req;
     
     if(url === '/styles.css') {
-        fs.readFile('./public/styles.css',(err,data) => {
+        fs.readFile('./publish/styles.css',(err,data) => {
             if(err) {
                 res.writeHead(500,{'content-type': 'text/plain'});
                 return res.end('<h1>Server Error</h1>');
@@ -14,7 +14,7 @@ const app = http.createServer((req,res)=>{
             res.end(data);
         })
     }else if(url === '/home'){
-        fs.readFile('./publish/home.html', (err, data)=>{
+        fs.readFile('./publish/index.html', (err, data)=>{
             if(err) {
                 res.writeHead(500,{'content-type': 'text/html'});
                 return res.end('<h1>Server Error</h1>');
