@@ -14,7 +14,7 @@ const app = http.createServer((req,res)=>{
             res.end(data);
         })
     }else if(url === '/home'){
-        fs.readFile('./pages/home.html', (err, data)=>{
+        fs.readFile('./publish/home.html', (err, data)=>{
             if(err) {
                 res.writeHead(500,{'content-type': 'text/html'});
                 return res.end('<h1>Server Error</h1>');
@@ -23,7 +23,7 @@ const app = http.createServer((req,res)=>{
             res.end(data);
         })
     }else if(url.toLowerCase() === '/about'){
-        fs.readFile('./pages/about.html',(err,data) => {
+        fs.readFile('./publish/about.html',(err,data) => {
             if(err) {
                 res.writeHead(500,{'content-type': 'text/html'});
                 return res.end('<h1>Server Error</h1>');
@@ -32,7 +32,7 @@ const app = http.createServer((req,res)=>{
             res.end(data);
         })
     } else if(url.toLowerCase() === '/contact'){
-        fs.readFile('./pages/contact.html',(err,data) => {
+        fs.readFile('./publish/contact.html',(err,data) => {
             if(err){
                 res.writeHead(500,{'content-type':'text/html'});
                 return res.end('<h1>Server Error</h1>');
@@ -41,7 +41,7 @@ const app = http.createServer((req,res)=>{
             res.end(data);
         })
     }else if(url.toLowerCase() === '/services'){
-        fs.readFile('./pages/services.html',(err,data) => {
+        fs.readFile('./publish/services.html',(err,data) => {
             if(err) {
                 res.writeHead(500,{'content-type': 'text/html'});
                 return res.end('<h1>Server Error</h1>');
